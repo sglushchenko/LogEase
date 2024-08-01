@@ -27,10 +27,15 @@ public class LogEase {
         }
     }
     
+    public init(destinations: Set<BaseDestination> = Set<BaseDestination>(), queue: DispatchQueue = DispatchQueue(label: "logease.queue", attributes: .concurrent)) {
+        self.queue = queue
+        self.destinations = destinations
+    }
+    
     // a set of active destinations
     public private(set) var destinations = Set<BaseDestination>()
     
-    private let queue = DispatchQueue(label: "logease.queue", attributes: .concurrent)
+    private let queue: DispatchQueue
     
     public func addDestination(_ destination: BaseDestination) {
         return queue.sync(flags: DispatchWorkItemFlags.barrier) {
