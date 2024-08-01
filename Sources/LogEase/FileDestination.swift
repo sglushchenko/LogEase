@@ -26,6 +26,7 @@ public class FileDestination: BaseDestination {
         
         if let logFileURL = logFileURL {
             self.logFileURL = logFileURL
+            return
         }
         
         // platform-dependent logfile directory default
