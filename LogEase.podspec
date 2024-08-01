@@ -8,14 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogEase'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'Logger LogEase.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
 Easiest logger. This logger you can use in yours frameworks. Many logger frameworks impossible to use in own framework because you have many errors during compilation
@@ -35,12 +29,5 @@ Easiest logger. This logger you can use in yours frameworks. Many logger framewo
   s.swift_versions = "5"
 
   s.resource_bundles = {"#{s.name}" => ['PrivacyInfo.xcprivacy']}
-  
-  # s.resource_bundles = {
-  #   'LogEase' => ['LogEase/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
