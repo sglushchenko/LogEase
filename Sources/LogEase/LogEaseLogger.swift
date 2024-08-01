@@ -3,7 +3,7 @@
 
 import Foundation
 
-public class LogEase {
+public class LogEaseLogger {
     public enum Level: Int {
         case verbose = 0
         case debug

@@ -15,7 +15,7 @@ public class ConsoleDestination: BaseDestination {
     
     public var loggerType: LoggerType = .print
     
-    public override func send(_ level: LogEase.Level, msg: String, file: StaticString, function: StaticString, line: Int) -> String? {
+    public override func send(_ level: LogEaseLogger.Level, msg: String, file: StaticString, function: StaticString, line: Int) -> String? {
         
         let formattedString = super.send(level, msg: msg, file: file, function: function, line: line)
 

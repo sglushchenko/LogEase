@@ -45,7 +45,7 @@ public class BaseDestination: Equatable, Hashable {
     public var asynchronously = true
 
     /// do not log any message which has a lower level than this one
-    public var outputLevel = LogEase.Level.verbose
+    public var outputLevel = LogEaseLogger.Level.verbose
 
     private let formatter = DateFormatter()
     private let startDate = Date()
@@ -62,7 +62,7 @@ public class BaseDestination: Equatable, Hashable {
         self.queue = queue
     }
 
-    public func send(_ level: LogEase.Level, msg: String, file: StaticString,
+    public func send(_ level: LogEaseLogger.Level, msg: String, file: StaticString,
                    function: StaticString, line: Int) -> String? {
         return formatMessage(level: level, msg: msg,
                                  file: file, function: function, line: line)
@@ -134,7 +134,7 @@ public class BaseDestination: Equatable, Hashable {
     public var showLineNumber: Bool = true
 
     /// returns the log message based on the format pattern
-    func formatMessage(level: LogEase.Level, msg: String,
+    func formatMessage(level: LogEaseLogger.Level, msg: String,
                        file: StaticString, function: StaticString, line: Int) -> String {
         
         var extendedDetails: String = ""
@@ -317,7 +317,7 @@ public class BaseDestination: Equatable, Hashable {
 //        return jsonString
 //    }
 
-    public func shouldLevelBeLogged(_ level: LogEase.Level) -> Bool {
+    public func shouldLevelBeLogged(_ level: LogEaseLogger.Level) -> Bool {
         if level.rawValue >= outputLevel.rawValue {
             return true
         } else {

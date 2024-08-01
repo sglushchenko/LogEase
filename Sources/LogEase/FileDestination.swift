@@ -60,7 +60,7 @@ public class FileDestination: BaseDestination {
     }
 
     // append to file. uses full base class functionality
-    public override func send(_ level: LogEase.Level, msg: String, file: StaticString, function: StaticString, line: Int) -> String? {
+    public override func send(_ level: LogEaseLogger.Level, msg: String, file: StaticString, function: StaticString, line: Int) -> String? {
         let formattedString = super.send(level, msg: msg, file: file, function: function, line: line)
 
         if let str = formattedString {
