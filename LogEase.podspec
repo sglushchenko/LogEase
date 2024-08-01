@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogEase'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Logger LogEase.'
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ Easiest logger. This logger you can use in yours frameworks. Many logger framewo
 
   s.swift_versions = "5"
 
-  s.resource_bundles = {"#{s.name}" => 'PrivacyInfo.xcprivacy'}
+  s.resource_bundles = {"#{s.name}" => ['PrivacyInfo.xcprivacy']}
   
   # s.resource_bundles = {
   #   'LogEase' => ['LogEase/Assets/*.png']
